@@ -1,0 +1,289 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+       body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: #001f3f;
+            cursor: pointer;
+            z-index: 1000;
+            transition: color 0,3s ease;
+        }
+        .menu-btn:hover {
+            color: #00c9ba;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #001f3f;
+            color: white;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: -250px;
+            transition: left 0.4s ease;
+            padding-top: 60px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+.sidebar.abierta {
+        left: 0;
+}
+.sidebar img {
+    width: 120px;
+    margin-bottom: 30px;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
+    transition: all;
+}
+.sidebar a:hover {
+    background-color: #00c9ba;
+    color: #001f3f;
+    transform: translateX(10px);
+    font-weight: bold;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.main-content {
+    padding: 50px;
+    flex-grow: 1;
+    background-color: rgb(243, 199, 221);
+}
+@media (max-width: 768px) {
+    .sidebar{
+        width: 100%;
+        left: 100%;
+    }
+    .main-content {
+        padding: 20px;
+        padding-top: 70px;
+    }
+    }
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 400px;
+    object-fit: cover; 
+}
+
+.slide.activa {
+    display: block; 
+}
+
+.carrusel-btn {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: rgba(0, 31, 63, 0.7); 
+    color: white; 
+    border: none; 
+    font-size: 24px; 
+    padding: 12px 16px; 
+    cursor: pointer; 
+    border-radius: 50%; 
+    transition: background-color 0.3s ease; 
+}
+
+.carrusel-btn:hover {
+ 
+    background-color: #00c9ba; 
+}
+
+.carrusel-btn.prev {
+    left: 15px; 
+}
+
+.carrusel-btn.next {
+    right: 15px; 
+}
+
+#planes {
+    padding: 30px 10px;
+}
+
+/* .cabecera-planes: Distribuye el título a la izquierda y el botón 'Reservar Cita' a la derecha. */
+.cabecera-planes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.miga-de-pan {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.cabecera-planes h2 {
+    font-size: 32px;
+    color: #111;
+    margin: 0;
+}
+
+
+.btn-reservar:hover {
+    background-color: #e0b633;
+    transform: scale(1.03);
+}
+
+.contenedor-planes {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-plan {
+    border-radius: 20px;
+    padding: 30px 25px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-plan:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-basico {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-plus {
+    background-color: #e2f4eb;
+}
+
+.tarjeta-vip {
+    background-color: #ffffff;
+    border: 3.5px solid #001f3f;
+    box-shadow: 0 6px 20px rgba(0, 31, 63, 0.12);
+}
+
+.etiqueta-exclusivo {
+    position: absolute;
+    top: -15px;
+    right: 25px;
+    background-color: #f5cb42;
+    color: #001f3f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 6px 16px;
+    border-radius: 8px;
+}
+
+.tarjeta-plan h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #001f3f;
+    margin: 10px 0;
+}
+
+.tarjeta-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 30px 0;
+}
+
+.tarjeta-plan li {
+    font-size: 15px;
+    color: #444;
+    padding: 8px 0;
+    line-height: 1.4;
+}
+
+.btn-plan {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secundario {
+    background-color: #001f3f;
+    color: white;
+}
+
+.btn-secundario:hover {
+    background-color: #00c9ba;
+    color: #001f3f;
+}
+
+.btn-vip {
+    background-color: #f5cb42;
+    color: #001f3f;
+}
+
+.btn-vip:hover {
+    background-color: #e0b633;
+}
