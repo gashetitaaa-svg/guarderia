@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adquisición de Plan - Dulces Soñadores</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="body-formulario">
+
+    <div class="contenedor-formulario">
+        <a href="dulces soñadores tarea 1.html#planes" class="btn-volver">&larr; Volver a Planes</a>
+        
+        <h2>Formulario de Registro</h2>
+        <p>Completa tus datos para inscribir a tu pequeño</p>
+
+        <form action="#" method="POST" class="formulario-registro">
+            
+            <fieldset>
+                <legend>Datos del Tutor</legend>
+                
+                <label for="nombre-padre">Nombre completo del padre o tutor:</label>
+                <input type="text" id="nombre-padre" name="nombre_padre" placeholder="Ej. Ana García" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+51 987 654 321" required>
+
+                <label for="contrasena">Crear Contraseña para la Cuenta:</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Mínimo 8 caracteres" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalles del Servicio</legend>
+
+                <label for="plan-seleccionado">Plan a Contratar:</label>
+                <select id="plan-seleccionado" name="plan" required>
+                    <option value="">-- Selecciona un Plan --</option>
+                    <option value="basico">Plan Dulce Básico (S/150/mes)</option>
+                    <option value="plus">Plan Soñador Plus (S/350/mes)</option>
+                    <option value="vip">Plan Mágico VIP (S/750/mes)</option>
+                </select>
+
+                <label for="nombre-hijo">Nombre y Apellido del Niño(a):</label>
+                <input type="text" id="nombre-hijo" name="nombre_hijo" placeholder="Ej. Mateo Pérez" required>
+
+                <label for="edad-hijo">Edad del Niño(a):</label>
+                <input type="number" id="edad-hijo" name="edad_hijo" min="1" max="6" placeholder="Años" required>
+
+                <label for="comentarios">Notas Adicionales o Alergias:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Indica si padece alguna alergia o condición especial..."></textarea>
+            </fieldset>
+
+            <div class="grupo-botones">
+                <button type="submit" class="btn-enviar">Confirmar y Registrar</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
