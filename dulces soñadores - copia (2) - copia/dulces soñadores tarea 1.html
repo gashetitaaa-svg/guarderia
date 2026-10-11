@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulces Soñadores</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="java.js"></script>
+</head>
+<body>
+
+    <!-- Botón para abrir el menu-->
+    <button class="menu-btn" onclick="abrirMenu()">&#9776;</button>
+
+    <!-- Menú lateral Sidebar -->
+    <nav class="sidebar" id="miBarra">
+    <button class="close-btn" onclick="cerrarMenu()">&times;</button>
+    <img src="imagenes/logo-Photoroom.png" alt="Dulces Soñadores" width="100" height="100">
+    <ul>
+        <li><a href="#inicio" onclick="cerrarMenu()">Inicio</a></li>
+        <li><a href="#planes" onclick="cerrarMenu()">Planes</a></li>
+        <li><a href="#nosotros" onclick="cerrarMenu()">Sobre Nosotros</a></li>
+        <li><a href="#contacto" onclick="cerrarMenu()">Contacto</a></li>
+        <li><a href="formularios.html" class="btn-menu-registro">Cuenta</a></li>
+    </ul>
+</nav>
+
+    <!-- Contenedor Principal de la Página -->
+    <main class="main-content">
+
+        <!-- SECCIÓN 1: INICIO (Bienvenida y Carrusel) -->
+        <section id="inicio">
+            <h1>¡Bienvenidos a Dulces Soñadores!</h1>
+            <p>Un espacio seguro y divertido para el desarrollo de tus pequeños.</p>
+
+            <div class="carrusel">
+                <button class="carrusel-btn prev" onclick="cambiarImagen(-1)">&#10094;</button>
+                <div class="carrusel-imagenes">
+                    <img class="slide activa" src="https://cdn.milenio.com/uploads/media/2023/08/23/guarderias-en-la-uat.jpg" alt="Comedor infantil">
+                    <img class="slide" src="imagenes/kids-playroom-1.jpg" alt="Zona de juegos">
+                    <img class="slide" src="imagenes/como-montar-una-guarderia-requisitos-y-pasos.jpg" alt="Área de descanso">
+                </div>
+                <button class="carrusel-btn next" onclick="cambiarImagen(1)">&#10095;</button>
+            </div>
+        </section>
+
+<!-- SECCIÓN 2: PLANES (Tarjetas) -->
+<section id="planes">
+    <div class="cabecera-planes">
+        <div>
+            <p class="miga-de-pan">DULCES SOÑADORES / PLANES</p>
+            <h2>Un mundo de aventuras para cada niño:</h2>
+        </div>
+    </div>
+    <div class="contenedor-planes">
+        <!-- PLAN BÁSICO -->
+        <div class="tarjeta-plan tarjeta-basico">
+            <h3>PLAN DULCE BÁSICO</h3>
+            <p class="precio">S/ 150 <span>/ mes</span></p>
+            <ul>
+                <li>Cuidado seguro por horas</li>
+                <li>Circuitos de estimulación temprana y psicomotricidad</li>
+                <li>Juego libre y socialización guiada con otros niños</li>
+                <li>Acceso a rincones de lectura y creatividad</li>
+            </ul>
+            <button class="btn-plan btn-secundario">Elegir Plan</button>
+        </div>
+        
+        <!-- PLAN PLUS -->
+        <div class="tarjeta-plan tarjeta-plus">
+            <h3>PLAN SOÑADOR PLUS</h3>
+            <p class="precio">S/ 350 <span>/ mes</span></p>
+            <ul>
+                <li>Jornada completa llena de aprendizaje y diversión</li>
+                <li>Menú nutritivo y delicioso (desayuno y almuerzo)</li>
+                <li>Talleres para descubrir talentos (arte, música y mini-chef)</li>
+                <li>Apoyo lúdico en el desarrollo del lenguaje y autonomía</li>
+            </ul>
+            <button class="btn-plan btn-secundario">Elegir Plan</button>
+        </div>
+        
+        <!-- PLAN VIP (Enfoque en desarrollo integral premium) -->
+        <div class="tarjeta-plan tarjeta-vip">
+            <span class="etiqueta-exclusivo">EXPERIENCIA PREMIUM</span>
+            <h3>PLAN MAGICO VIP</h3>
+            <p class="precio">S/ 750 <span>/ mes</span></p>
+            <ul>
+                <li>Programa de inmersión bilingüe (Inglés divertido)</li>
+                <li>Menú orgánico 100% personalizado según sus gustos</li>
+                <li>Acompañamiento psicopedagógico 1:1 para potenciar sus talentos</li>
+                <li>Clases exclusivas de su elección (Natación infantil o mini-ciencias)</li>
+                <li>Acceso a todas las áreas de juego </li>
+            </ul>
+            <button class="btn-plan btn-vip">SOLICITAR ADMISIÓN</button>
+        </div>
+    </div>
+</section>
+
+        <!-- SECCIÓN 3: SOBRE NOSOTROS -->
+        <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos un equipo apasionado por la educación inicial y el cuidado infantil, dedicados a brindar un entorno seguro, afectuoso y estimulante.</p>
+    
+    <div class="valores-contenedor">
+        <div class="tarjeta-valor">
+            <h3>Seguridad</h3>
+            <p>Monitoreo continuo e instalaciones adaptadas para la protección integral de tus hijos.</p>
+        </div>
+        <div class="tarjeta-valor">
+            <h3>Amor y Cuidado</h3>
+            <p>Personal calificado que brinda atención cálida y personalizada a cada niño.</p>
+        </div>
+        <div class="tarjeta-valor">
+            <h3>Aprendizaje Activo</h3>
+            <p>Talleres y actividades pedagógicas diseñadas para estimular su desarrollo creativo y cognitivo.</p>
+        </div>
+    </div>
+</section>
+
+        <!-- SECCIÓN 4: CONTACTO -->
+        <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¡Ponte en contacto con nosotros para agendar una visita o resolver tus dudas!</p>
+    
+    <div class="contenedor-contacto">
+        <div class="info-contacto">
+            <p><strong>Dirección:</strong> </p>
+            <p><strong>Teléfono:</strong> +51 973 317 545 </p>
+            <p><strong>Correo:</strong> dsguarderia@gmail.com</p>
+            <p><strong>Horario de atención:</strong> Lunes a Viernes de 7:30 am - 6:00 pm</p>
+        </div>
+        
+        <form class="form-contacto-rapido">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Correo Electrónico" required>
+            <input type="text" placeholder="Escribe tu mensaje..." rows="4" required>
+            <button type="submit" class="btn-plan btn-secundario">Enviar Mensaje</button>
+        </form>
+    </div>
+</section>
+<footer class="pie-pagina">
+    <p>©2026 Dulces Soñadores. </p>
+</footer>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
